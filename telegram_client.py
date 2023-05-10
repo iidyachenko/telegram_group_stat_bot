@@ -32,31 +32,30 @@ last_date = None
 size_chats = 200
 groups = []
 
-result = client(
-    GetDialogsRequest(
-        offset_date=last_date,
-        offset_id=0,
-        offset_peer=InputPeerEmpty(),
-        limit=size_chats,
-        hash=0,
-    )
-)
-
-chats.extend(result.chats)
-for chat in chats:
-    try:
-        if chat.id == 686046656:
-            groups.append(chat)
-    except:
-        continue
-
-
-print("Выберите номер группы из перечня:")
-
-for i, g in enumerate(groups):
-    print(str(i) + "- " + g.title)
-
-print('Узнаём пользователей...')
-all_participants = client.get_participants(groups[0])
-for user in all_participants:
-    print(user)
+# result = client(
+#     GetDialogsRequest(
+#         offset_date=last_date,
+#         offset_id=0,
+#         offset_peer=InputPeerEmpty(),
+#         limit=size_chats,
+#         hash=0,
+#     )
+# )
+#
+# chats.extend(result.chats)
+# for chat in chats:
+#     try:
+#         if chat.id == 686046656:
+#             groups.append(chat)
+#     except:
+#         continue
+#
+# print("Выберите номер группы из перечня:")
+#
+# for i, g in enumerate(groups):
+#     print(str(i) + "- " + g.title)
+#
+# print('Узнаём пользователей...')
+# all_participants = client.get_participants(groups[0])
+# for user in all_participants:
+#     print(user)

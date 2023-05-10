@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "telegram-group-stat-bot"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "telegram_group_stat_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+telethon = "^1.28.5"
+asyncio = "^3.4.3"
+aiogram = "^2.25.1"
+tgcrypto = "^1.2.5"
+pyrogram = "^2.0.106"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
